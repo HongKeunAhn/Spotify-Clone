@@ -1,13 +1,14 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import Sidebar from '../components/Sidebar/Sidebar';
 
 const Home: NextPage = () => {
   return (
-    <div className="">
-
-
-      <h1>Spotify 2.0 build</h1>
+    <div className='bg-black h-screen overflow-hidden'>
+      <main className=''>
+        <Sidebar />
+      </main>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
