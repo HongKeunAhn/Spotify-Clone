@@ -7,7 +7,7 @@ import {
   RssIcon,
   SearchIcon,
 } from '@heroicons/react/outline';
-import { signOut, useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 import useSpotify from '../../hooks/useSpotify';
 import { useRecoilState } from 'recoil';
 import { playListIdState } from '../../store';
@@ -33,13 +33,6 @@ const Sidebar = () => {
     sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex'
     >
       <div className='space-y-4'>
-        <button
-          type='button'
-          className='flex items-center space-x-2 hover:text-white'
-          onClick={() => signOut()}
-        >
-          <p>Log out</p>
-        </button>
         <button type='button' className='flex items-center space-x-2 hover:text-white'>
           <HomeIcon className='h-5 w-5' />
           <p>Home</p>
