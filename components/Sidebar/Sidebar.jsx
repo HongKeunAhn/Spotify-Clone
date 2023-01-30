@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {
-  HeartIcon,
   HomeIcon,
   LibraryIcon,
   PlusCircleIcon,
   RssIcon,
   SearchIcon,
 } from '@heroicons/react/outline';
+import { HeartIcon } from '@heroicons/react/solid';
 import { useSession } from 'next-auth/react';
 import useSpotify from '../../hooks/useSpotify';
 import { useRecoilState } from 'recoil';
@@ -30,7 +30,7 @@ const Sidebar = () => {
     <div
       className='text-gray-500 p-5 text-xs lg:text-sm border-r 
     border-gray-900 overflow-y-scroll scrollbar-hide h-screen 
-    sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex'
+    sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex pb-36'
     >
       <div className='space-y-4'>
         <button type='button' className='flex items-center space-x-2 hover:text-white'>
@@ -53,7 +53,7 @@ const Sidebar = () => {
           <p>Create PlayList</p>
         </button>
         <button type='button' className='flex items-center space-x-2 hover:text-white'>
-          <HeartIcon className='h-5 w-5' />
+          <HeartIcon className='h-5 w-5 text-blue-500' />
           <p>Liked Songs</p>
         </button>
         <button type='button' className='flex items-center space-x-2 hover:text-white'>
