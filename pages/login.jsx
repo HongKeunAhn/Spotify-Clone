@@ -1,21 +1,7 @@
 import { getProviders, signIn } from 'next-auth/react';
 import React from 'react';
 
-type Spotify = {
-  spotify: {
-    callbackUrl: string;
-    id: string;
-    name: string;
-    signinUrl: string;
-    type: string;
-  };
-};
-
-type LoginProps = {
-  providers: Spotify;
-};
-
-const Login = ({ providers }: LoginProps) => {
+const Login = ({ providers }) => {
   return (
     <div className='flex flex-col items-center justify-center bg-black min-h-screen w-full'>
       <img className='w-52 mb-5' src='https://links.papareact.com/9xl' alt='spotify logo' />
